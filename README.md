@@ -6,5 +6,5 @@ https://github.com/gourav-mishra551/E-Commerce/assets/108566248/f27cb4b3-fd39-4d
 
 # Concepts used in this Application
 . react-hooks
-. react-context-api
-. react-local-storage
+. redux
+. scss
