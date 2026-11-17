@@ -2,8 +2,6 @@ import React from 'react';
 import {
     Breadcrumb,
     BreadcrumbItem,
-    BreadcrumbLink,
-    BreadcrumbSeparator,
   } from '@chakra-ui/react'
 
   import { ChevronRightIcon } from '@chakra-ui/icons';

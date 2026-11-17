@@ -4,7 +4,6 @@ import { store } from '../productsStore/Store';
 import { useDispatch } from 'react-redux';
 import { cartActions } from '../redux-state/CartState';
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
 import BreadCrumb from './BreadCrumb';
 import "../styles/SinglePage.css";
 import { AiFillStar } from "react-icons/ai";
@@ -15,7 +14,6 @@ import JournalSection from "./JournalSection"
 import SearchBox from './SearchBox';
 import Review1 from './Review1';
 
-import better from "../assets/better.jpeg";
 import { FaShippingFast } from "react-icons/fa";
 import { FaLock } from "react-icons/fa";
 import { BsCurrencyDollar } from "react-icons/bs";
@@ -53,9 +51,6 @@ const SinglePage = () => {
 
   var image = primaryImage;
 
-  let tempImage = image;
-
-  
 
 
 
@@ -93,20 +88,20 @@ const SinglePage = () => {
 
 
       <figure className='singlePageMainPicHold relative'>
-        {imgChnage === true ? <img src={activeImg} className=" w-48 cursor-pointer rounded-2xl object-cover singlePageMainPic" /> : <img src={image} className=" w-48 cursor-pointer rounded-2xl object-cover singlePageMainPic" />}
+        {imgChnage === true ? <img src={activeImg} alt={name} className=" w-48 cursor-pointer rounded-2xl object-cover singlePageMainPic" /> : <img src={image} alt={name} className=" w-48 cursor-pointer rounded-2xl object-cover singlePageMainPic" />}
       </figure>
 
 
 
 
       <div className='sideImageHold flex flex-col relative gap-12'>
-        <img src={hoverImg} className=" w-64 cursor-pointer  object-cover" onMouseEnter={imgSrcTarget} onMouseLeave={defaultImageSrc} />
-        <img src='https://cdn.shopify.com/s/files/1/0081/7374/8305/products/NO_Lists_for_Site-SIG_21bc4fd3-c2b5-4e21-8244-1f0f61cce160_540x.png?v=1599504641' className='w-64 cursor-pointer rounded-lg object-cover' onMouseEnter={imgSrcTarget} onMouseLeave={defaultImageSrc} />
+        <img src={hoverImg} alt="" className=" w-64 cursor-pointer  object-cover" onMouseEnter={imgSrcTarget} onMouseLeave={defaultImageSrc} />
+        <img src='https://cdn.shopify.com/s/files/1/0081/7374/8305/products/NO_Lists_for_Site-SIG_21bc4fd3-c2b5-4e21-8244-1f0f61cce160_540x.png?v=1599504641' alt="" className='w-64 cursor-pointer rounded-lg object-cover' onMouseEnter={imgSrcTarget} onMouseLeave={defaultImageSrc} />
       </div>
 
       <div className='bottomImgHold flex flex-row relative gap-8'>
-        <img src='https://cdn.shopify.com/s/files/1/0081/7374/8305/products/anysiaalice_image_720x.jpg?v=1599504641' className=' w-80 si cursor-pointer object-cover' onMouseEnter={imgSrcTarget} onMouseLeave={defaultImageSrc} />
-        <img src='https://cdn.shopify.com/s/files/1/0081/7374/8305/products/anysiaalice_quote-1_720x.jpg?v=1599504641' className=' w-80 si cursor-pointer object-cover' id='mobileDontSHow' onMouseEnter={imgSrcTarget} onMouseLeave={defaultImageSrc} />
+        <img src='https://cdn.shopify.com/s/files/1/0081/7374/8305/products/anysiaalice_image_720x.jpg?v=1599504641' alt="" className=' w-80 si cursor-pointer object-cover' onMouseEnter={imgSrcTarget} onMouseLeave={defaultImageSrc} />
+        <img src='https://cdn.shopify.com/s/files/1/0081/7374/8305/products/anysiaalice_quote-1_720x.jpg?v=1599504641' alt="" className=' w-80 si cursor-pointer object-cover' id='mobileDontSHow' onMouseEnter={imgSrcTarget} onMouseLeave={defaultImageSrc} />
       </div>
 
 

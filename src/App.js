@@ -1,10 +1,7 @@
 import './App.css';
-import { useState } from 'react';
 import NavBar from './components/NavBar';
-import Body from './components/Body';
 import SimpleSlider from './components/HeroCarousel';
 import HeroSection from './components/HeroSection';
-import OurBestSellers from './components/OurBestSellers';
 import Ingridients from './components/Ingridients';
 import JournalSection from './components/JournalSection';
 import BsText from './components/BsText';
@@ -12,7 +9,6 @@ import { Route, Routes } from 'react-router-dom';
 import { BrowserRouter } from 'react-router-dom';
 import SinglePage from "./components/SinglePage";
 import JournalPage from "./components/JournalPage";
-import Cart from './components/Cart';
 import FollowONIG from './components/FollowONIG';
 import Products from './components/Products';
 import CartHold from './components/CartHold';

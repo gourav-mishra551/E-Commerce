@@ -7,9 +7,7 @@ import { Link } from 'react-router-dom';
 const BestSellers = () => {
   return (
     <div className='bestSellerMainParent flex flex-row'>
-      {store.map((item) => {
-        if (item.type == "bestSeller")
-          return (
+      {store.filter((item) => item.type === "bestSeller").map((item) => (
             <Link to={`/${item.id}`} key={item.id}>  
             <div key={item.id} className="bestSellerIndivitualItem">
               <HoverImage src={item.primaryImage} hoverSrc={item.hoverImg}   className="bestSellerImage rounded-xl mb-6"/>
@@ -17,8 +15,7 @@ const BestSellers = () => {
               <p className=' font-normal text-center'> ${item.price} </p>
             </div>
             </Link>
-          )
-      })}
+      ))}
 
     </div>
   )

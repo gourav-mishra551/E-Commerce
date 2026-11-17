@@ -19,9 +19,9 @@ const HeroSection = () => {
 
 
             <div className='heroPicHold flex flex-row '>
-                <img src={one} className=" w-20" />
-                <img src={two} className=" w-20" />
-                <img src={three} className=" w-20" />
+                <img src={one} alt="" className=" w-20" />
+                <img src={two} alt="" className=" w-20" />
+                <img src={three} alt="" className=" w-20" />
             </div>
 
             <div className=' text-xl font-medium flex flex-row heroHeadingHold'>

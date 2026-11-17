@@ -465,11 +465,9 @@ const SearchBox = () => {
 
       <div className='searchItemsHold'>{names.filter(val => {
         if (search === "") {
-          return val;
+          return true;
         }
-        else if (val.description.toLowerCase().includes(search.toLowerCase())) {
-          return val;
-        }
+        return val.description.toLowerCase().includes(search.toLowerCase());
       }).slice(0,6).map(i => {
         return (<div key={i.id} className="searchList relative">
           <p className='font-semibold text-md mb-1 capitalize'> {i.name}</p>

@@ -1,8 +1,4 @@
 import React from 'react'
-import better from "../assets/better.jpeg";
-import mastercard from "../assets/mastercard.png";
-import { FaShippingFast } from "react-icons/fa";
-import { FaLock } from "react-icons/fa";
 import { FaCcVisa } from "react-icons/fa";
 import { FaCcPaypal } from "react-icons/fa";
 import { FaCcStripe } from "react-icons/fa";

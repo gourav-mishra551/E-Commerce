@@ -6,7 +6,6 @@ import CartPageFooter from './CartPageFooter';
 import CartTotal from './CartTotal';
 import EmptyCart from './EmptyCart';
 import MobileNav from './MobileNav';
-import SPFooter from './SPFooter';
 import YouMayAlsoLike from './YouMayAlsoLike';
 import "../styles/BestSellers.css";
 

@@ -1,34 +1,17 @@
 import React from 'react'
-import { useSelector } from 'react-redux'
 import { cartActions } from '../redux-state/CartState'
 import { useDispatch } from 'react-redux'
-import cartgif from "../assets/cartGif.gif";
-import qty from "../assets/qty.png"
-
 import { MdAdd } from "react-icons/md";
 //import { GrFormSubtract } from "react-icons/gr"
 import { RiSubtractFill } from "react-icons/ri"
-import YouMayAlsoLike from './YouMayAlsoLike';
-import SPFooter from './SPFooter';
 import { Link } from 'react-router-dom';
 
 
 const Cart = (props) => {
 
-  const { title, quantity, price, id, image, total, cartLength } = props.item;
-
-
-
-  const cartList = useSelector((state) => state.cart.items);
-
-
+  const { title, quantity, price, id, image } = props.item;
 
   const dispacth = useDispatch();
-
-
-  const totalPrice = cartList.map(item => {
-    return item.quantity * item.price;
-  }).reduce((totalPrice, singleItemPrice) => totalPrice + singleItemPrice, 0);
 
 
 
@@ -60,7 +43,7 @@ const Cart = (props) => {
         <div className='cartImaegHold relative flex flex-col w-72'>
 
           <Link to={`/${id}`}>
-            <img src={image} className=" relative  fof w-44 rounded-lg cartImg" />
+            <img src={image} alt={title} className=" relative  fof w-44 rounded-lg cartImg" />
           </Link>
 
         </div>

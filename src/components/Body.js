@@ -88,11 +88,11 @@ const Body = () => {
 
                 <div className='bodyTypeHold'>
                     {store.map((item) => {
-                        if (item.type == "navbar-BodyType") {
+                        if (item.type === "navbar-BodyType") {
                             return (
                                 <Link to={`/${item.id}`} key={item.id}>
                                     <div className="bodyTypeIndivitual">
-                                        <HoverImage src={item.primaryImage} hoverSrc={item.hoverImg || item.primaryImage} className="rounded-xl bodyTypeImage" />
+                                        <HoverImage src={item.primaryImage} hoverSrc={item.hoverImg || item.primaryImage} className="rounded-xl bodyTypeImage" alt={item.name} />
                                         <p className='fs bodyTypeName'>{item.name}</p>
                                     </div>
                                 </Link>
@@ -142,18 +142,19 @@ const Body = () => {
                 <div className='flex flex-row'>
                     <div className='TravelStoreHold flex flex-row gap-16'>
                         {store.map((item) => {
-                            if (item.type == "navbar-TravelType") {
+                            if (item.type === "navbar-TravelType") {
                                 return (
                                     <Link to={`/${item.id}`} key={item.id}>
 
                                         <div key={item.id} className="TravelIndivitual">
-                                            <HoverImage src={item.primaryImage} hoverSrc={item.hoverImg} className=" rounded-xl w-40" />
+                                            <HoverImage src={item.primaryImage} hoverSrc={item.hoverImg} className=" rounded-xl w-40" alt={item.name} />
                                             <p className=' font-semibold text-base px'> {item.name} </p>
                                             <p className='text-base font-normal text-center'> ${item.price} </p>
                                         </div>
                                     </Link>
                                 )
                             }
+                            return null
                         })}
                     </div>
 
@@ -178,18 +179,19 @@ const Body = () => {
 
                 <div className='newTypeHold relative flex felx-row gap-10'>
                     {store.map((item) => {
-                        if (item.type == "navbar-NewType") {
+                        if (item.type === "navbar-NewType") {
                             return (
                                 <Link to={`/${item.id}`} key={item.id}>
 
                                     <div className='newIndivitual'>
-                                        <HoverImage src={item.primaryImage} hoverSrc={item.hoverImg} className=" rounded-xl w-40" />
+                                        <HoverImage src={item.primaryImage} hoverSrc={item.hoverImg} className=" rounded-xl w-40" alt={item.name} />
                                         <p className='font-semibold text-center text-base px'> {item.name} </p>
                                         <p className='text-base font-normal text-center'> ${item.price} </p>
                                     </div>
                                 </Link>
                             )
                         }
+                        return null
                     })}
                 </div>
 

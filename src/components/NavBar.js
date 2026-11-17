@@ -7,20 +7,14 @@ import GiftSets from './GiftSets';
 import Body from './Body';
 import { FaShoppingBag } from "react-icons/fa";
 import { Link } from 'react-router-dom';
-import { useSelector } from 'react-redux';
-
 const NavBar = () => {
     const [show, setShow] = useState(false);
     const [show2, setShow2] = useState(false);
     const [show3, setShow3] = useState(false);
-    const [show4, setShow4] = useState(false);
-
-
     const showHandler = () => {
         setShow(true)
         setShow2(false)
         setShow3(false)
-        setShow4(false)
 
     }
 
@@ -28,7 +22,6 @@ const NavBar = () => {
         setShow2(true)
         setShow(false)
         setShow3(false)
-        setShow4(false)
 
     }
 
@@ -36,15 +29,6 @@ const NavBar = () => {
         setShow3(true)
         setShow(false)
         setShow2(false)
-        setShow4(false)
-    }
-
-    const showHandler4 = () => {
-        setShow4(true)
-        setShow(false)
-        setShow2(false)
-        setShow3(false)
-
     }
 
 
@@ -52,7 +36,6 @@ const NavBar = () => {
         setShow(false)
         setShow2(false)
         setShow3(false)
-        setShow4(false)
 
 
     }
@@ -66,7 +49,7 @@ const NavBar = () => {
                 <nav class="navbar" role="navigation" aria-label="menu">
 
                     <Link to="/">
-                        <img src={logo} className=" ml-32" />
+                        <img src={logo} alt="" className=" ml-32" />
                     </Link>
 
                     <ul class="menuNav">

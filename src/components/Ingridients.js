@@ -15,12 +15,12 @@ const Ingridients = () => {
             <p className=' text-4xl ogtext font-medium text-center mb-16'> OUR INGRIDENTS </p>
 
             <div className='ingImgHold flex flex-row gap-36 justify-center'>
-                <img src={ing1} className="zoom2" />
-                <img src={ing2} className="zoom2" />
-                <img src={ing3} className="zoom2" />
-                <img src={ing4} className="zoom2" />
-                <img src={ing5} className="zoom2" />
-                <img src={ing6} className="zoom2" />
+                <img src={ing1} alt="" className="zoom2" />
+                <img src={ing2} alt="" className="zoom2" />
+                <img src={ing3} alt="" className="zoom2" />
+                <img src={ing4} alt="" className="zoom2" />
+                <img src={ing5} alt="" className="zoom2" />
+                <img src={ing6} alt="" className="zoom2" />
             </div>
 
             <div className='ingTextHold flex flex-row gap-32 justify-center'>
