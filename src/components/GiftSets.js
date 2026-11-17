@@ -1,7 +1,7 @@
 import React from 'react'
 import "../styles/GiftSets.css";
 import { store } from '../productsStore/Store';
-import HoverImage from 'react-hover-image/build';
+import HoverImage from './HoverImage';
 import { Link } from 'react-router-dom';
 const GiftSets = () => {
     return (
