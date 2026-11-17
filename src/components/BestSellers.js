@@ -1,7 +1,7 @@
 import React from 'react'
 import { store } from '../productsStore/Store'
 import "../styles/BestSellers.css";
-import HoverImage from 'react-hover-image/build';
+import HoverImage from './HoverImage';
 import { Link } from 'react-router-dom';
 
 const BestSellers = () => {

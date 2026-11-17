@@ -13,7 +13,7 @@ import filterBtn from "../assets/filterBtn.png";
 import sortBtn from "../assets/sortBtn.png"
 import { useState } from 'react';
 import { store } from "../productsStore/Store";
-import HoverImage from 'react-hover-image/build';
+import HoverImage from './HoverImage';
 import JournalSection from "./JournalSection"
 import Features2 from './Features2';
 
