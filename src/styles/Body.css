@@ -59,24 +59,33 @@
 
 .bodyTypeImage {
     width: 10rem;
+    height: 10rem;
     object-fit: cover;
+    display: block;
 }
 
 .bodyTypeIndivitual {
     display: flex !important;
-    flex-direction: row !important;
+    flex-direction: column !important;
+    align-items: center;
     position: relative;
-    top: -25rem;
-    gap: 0rem !important;
-    left: 9rem;
+    top: 0;
+    left: 0;
+    gap: 0.75rem !important;
+    width: 10rem;
 }
 
 .bodyTypeHold {
-    flex-wrap: wrap;
-    flex-wrap: wrap;
-    width: 50rem;
-    justify-content: center;
-    gap: 2rem;
+    position: absolute;
+    top: 0;
+    left: 14rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: auto;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 2.5rem;
 }
 
 .fs {
@@ -84,11 +93,15 @@
 }
 
 .bodyTypeName {
-    position: relative;
-    top: 11rem;
-    left: -10rem;
+    position: static;
+    top: auto;
+    left: auto;
     font-weight: 400;
     font-size: 17px;
+    text-align: center;
+    width: 100%;
+    line-height: 1.3;
+    margin: 0;
 }
 
 .hairTypeCategoryONE {
@@ -137,7 +150,28 @@
     position: relative;
     top: 8rem;
     left: 15.8rem;
+}
 
+.TravelStoreHold {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    gap: 2.5rem;
+}
+
+.TravelIndivitual {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    width: 10rem;
+}
+
+.TravelIndivitual img {
+    width: 10rem;
+    height: 10rem;
+    object-fit: cover;
 }
 
 .px {
@@ -160,8 +194,28 @@
 }
 
 .newTypeHold {
-    top: -13rem;
+    position: absolute;
+    top: 0;
     left: 14rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    gap: 2.5rem;
+}
+
+.newIndivitual {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    width: 10rem;
+}
+
+.newIndivitual img {
+    width: 10rem;
+    height: 10rem;
+    object-fit: cover;
 }
 
 .w56rem{
