@@ -2,15 +2,11 @@ import React from 'react'
 import GooglePayButton from "@google-pay/button-react";
 import { PayPalButtons } from '@paypal/react-paypal-js';
 import { PayPalScriptProvider } from '@paypal/react-paypal-js';
-import { useEffect } from 'react';
 import CartAdditonalFeatures from './CartAdditonalFeatures';
-import CartPageFaq from './CartPageFaq';
 import Features2 from './Features2';
 import { useSelector } from 'react-redux';
 
 const CartTotal = (props) => {
-
-    let finapPr = props.totalPr + 20 + 15;
 
     let cartItems = useSelector((state) => state.cart.items);
 

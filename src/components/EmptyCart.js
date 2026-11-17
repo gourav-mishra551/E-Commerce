@@ -11,7 +11,7 @@ const EmptyCart = () => {
                 <p className=' text-3xl fof uppercase ' id='fs'>Cart Is Empty Maybe Order Something :) </p>
             </div>
 
-            <img src={cartgif} className=" absolute cg" />
+            <img src={cartgif} alt="" className=" absolute cg" />
         </div>
     )
 }

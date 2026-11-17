@@ -39,24 +39,24 @@ export default class AutoPlayMethods extends Component {
                 }
             ]
         };
+        const bestSellers = store.filter((item) => item.type === "ourBestSellers");
+
         return (
             <div className="youMay">
                 <Slider ref={slider => (this.slider = slider)} {...settings}>
-                    {store.map((item) => {
-                        if (item.type == "ourBestSellers") {
-                            return (<div key={item.id}>
-                                <Link to={`/${item.id}`}>
-                                    <img src={item.primaryImage} className=" w-48 spCaroImg brForMobile rounded-xl  mb-8" />
-                                </Link>
-                            </div>)
-                        }
-                    })}
+                    {bestSellers.map((item) => (
+                        <div key={item.id}>
+                            <Link to={`/${item.id}`}>
+                                <img
+                                    src={item.primaryImage}
+                                    alt={item.name}
+                                    className=" w-48 spCaroImg brForMobile rounded-xl  mb-8"
+                                />
+                            </Link>
+                        </div>
+                    ))}
                 </Slider>
-
             </div>
         );
     }
 }
-
-
-

@@ -31,9 +31,7 @@ const GiftSets = () => {
 
             <div className='flex fle-row gap-20 giftHold'>
 
-                {store.map((item) => {
-                    if (item.type == "gift")
-                        return (
+                {store.filter((item) => item.type === "gift").map((item) => (
                             <Link to={`/${item.id}`} key={item.id}>
 
                                 <div key={item.id} className="giftIndivitual">
@@ -42,8 +40,7 @@ const GiftSets = () => {
                                     <p className='giftPrice font-normal text-center' >${item.price} </p>
                                 </div>
                             </Link>
-                        )
-                })}
+                ))}
 
 
 

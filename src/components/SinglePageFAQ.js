@@ -80,7 +80,7 @@ const SinglePageFAQ = () => {
                         </AccordionButton>
                     </h2>
                     <AccordionPanel pb={4}>
-                        <img src={aus} />
+                        <img src={aus} alt="" />
                     </AccordionPanel>
                 </AccordionItem>
 
