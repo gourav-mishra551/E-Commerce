@@ -25,7 +25,7 @@ const JournalSection = () => {
                     <img src='https://cdn.shopify.com/s/files/1/0081/7374/8305/articles/400x400_blog_540x.jpg?v=1652511342' alt='hey' className='jsImg rounded-xl' />
                 </Link>
 
-                <img src='https://cdn.shopify.com/s/files/1/0081/7374/8305/articles/BBQ_1200x440_7b63676b-f505-4b21-9192-e1b43a53be32_540x.jpg?v=1625596357' alt='hey' className='jsImg rounded-xl' />
+                <img src='https://cdn.shopify.com/s/files/1/0081/7374/8305/articles/400x400_blog_540x.jpg?v=1652511342' alt='Journal article' className='jsImg rounded-xl' />
 
 
             </div>

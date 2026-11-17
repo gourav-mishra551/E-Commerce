@@ -1,11 +1,11 @@
 
-
 import React from 'react'
 import "../styles/Body.css";
 import { useState } from 'react';
 import { store } from '../productsStore/Store';
 import HoverImage from "react-hover-image/build"
 import { Link } from 'react-router-dom';
+
 
 const Body = () => {
 
@@ -17,60 +17,30 @@ const Body = () => {
 
     const showHandler = () => {
         setShow(true)
-        document.querySelector(".bodyContent").classList.add("transition");
         setShow2(false)
         setShow3(false)
         setShow4(false)
-
-        document.querySelector(".bodyContent").style.opacity = "1";
-        document.querySelector(".hairContent").style.opacity = "0";
-        document.querySelector(".newContent").style.opacity = "0";
-        document.querySelector(".travelContent").style.opacity = "0";
-
     }
 
     const showHandler2 = () => {
         setShow2(true)
-        document.querySelector(".hairContent").classList.add("transition2");
         setShow(false)
         setShow3(false)
         setShow4(false)
-
-
-        document.querySelector(".hairContent").style.opacity = "1";
-        document.querySelector(".bodyContent").style.opacity = "0";
-        document.querySelector(".newContent").style.opacity = "0";
-        document.querySelector(".travelContent").style.opacity = "0";
-
     }
 
     const showHandler3 = () => {
         setShow3(true)
-        document.querySelector(".travelContent").classList.add("transition3");
-        //document.querySelector(".hairContent").style.opacity = "0";
-        //document.querySelector(".newContent").style.opacity="0"
         setShow(false)
         setShow2(false)
         setShow4(false)
-
-        document.querySelector(".travelContent").style.opacity = "1";
-        document.querySelector(".hairContent").style.opacity = "0";
-        document.querySelector(".bodyContent").style.opacity = "0";
-        document.querySelector(".newContent").style.opacity = "0";
     }
 
     const showHandler4 = () => {
         setShow4(true)
-        document.querySelector(".newContent").classList.add("transition4");
-        //document.querySelector(".travelContent").style.opacity = "0";
         setShow(false)
         setShow2(false)
         setShow3(false)
-
-        document.querySelector(".newContent").style.opacity = "1";
-        document.querySelector(".hairContent").style.opacity = "0";
-        document.querySelector(".bodyContent").style.opacity = "0";
-        document.querySelector(".travelContent").style.opacity = "0";
     }
 
 
@@ -79,12 +49,6 @@ const Body = () => {
         setShow2(false)
         setShow3(false)
         setShow4(false)
-
-        document.querySelector(".newContent").style.opacity = "0";
-        document.querySelector(".hairContent").style.opacity = "0";
-        document.querySelector(".bodyContent").style.opacity = "0";
-        document.querySelector(".travelContent").style.opacity = "0";
-
     }
     return (
         <div>
@@ -114,7 +78,7 @@ const Body = () => {
 
 
 
-            {show && <div className=' z-50 bodyContent color text-base' onMouseLeave={dontShowHandler}>
+            {show && <div className=' z-50 bodyContent color text-base transition' onMouseLeave={dontShowHandler}>
                 <p>   Body Wash </p>
                 <p>   Body Scrub </p>
                 <p>   Body Lotions </p>
@@ -122,19 +86,19 @@ const Body = () => {
                 <p>   Hand Wash </p>
                 <p>   Hand Creams </p>
 
-                <div className='bodyTypeHold flex'>
+                <div className='bodyTypeHold'>
                     {store.map((item) => {
                         if (item.type == "navbar-BodyType") {
                             return (
                                 <Link to={`/${item.id}`} key={item.id}>
-
-                                    <div key={item.id} className="bodyTypeIndivitual">
-                                        <HoverImage src={item.primaryImage} hoverSrc={item.hoverImg} className="rounded-xl  bodyTypeImage" />
-                                        <p className=' text-center fs bodyTypeName'> {item.name} </p>
+                                    <div className="bodyTypeIndivitual">
+                                        <HoverImage src={item.primaryImage} hoverSrc={item.hoverImg || item.primaryImage} className="rounded-xl bodyTypeImage" />
+                                        <p className='fs bodyTypeName'>{item.name}</p>
                                     </div>
-
-                                </Link>)
+                                </Link>
+                            )
                         }
+                        return null
                     })}
                 </div>
 
@@ -142,7 +106,7 @@ const Body = () => {
 
 
 
-            {show2 && <div className=' z-50 hairContent flex flex-col' onMouseLeave={dontShowHandler}>
+            {show2 && <div className=' z-50 hairContent flex flex-col transition2' onMouseLeave={dontShowHandler}>
                 <div className='hairTypeCategoryONE flex flex-col gap-8'>
                     <p className=' font-bold text-xl'>  CATEGORY </p>
                     <p>  Shampoos </p>
@@ -161,8 +125,8 @@ const Body = () => {
                 </div>
 
                 <div className='hairImageHold flex flex-row gap-10'>
-                    <img src='https://cdn.shopify.com/s/files/1/0081/7374/8305/articles/Natural_Balance_Shampoo_02_540x.jpg?v=1550710011' className=' rounded-xl w-52' />
-                    <img src='https://cdn.shopify.com/s/files/1/0081/7374/8305/articles/ee7ea9c87918e493665a3a84bdf6c00a_large_1b25100f-7d60-451b-9d01-e74d104141d5_540x.jpg?v=1550710009' className=' rounded-xl w-52' />
+                    <img src='https://cdn.shopify.com/s/files/1/0081/7374/8305/products/Signature_Foaming_Facial_Cleanser_125ml_01_Product_540x.jpg?v=1599504600' alt='Natural haircare' className=' rounded-xl w-52' />
+                    <img src='https://cdn.shopify.com/s/files/1/0081/7374/8305/products/Signature_Facial_Moisturiser_125ml_01_Product_540x.jpg?v=1599504612' alt='Sustainable lifestyle' className=' rounded-xl w-52' />
                 </div>
 
                 <div className='hairTextHold flex flex-row relative font-semibold'>
@@ -174,7 +138,7 @@ const Body = () => {
 
             </div>}
 
-            {show3 && <div className='z-50 travelContent' onMouseLeave={dontShowHandler}>
+            {show3 && <div className='z-50 travelContent transition3' onMouseLeave={dontShowHandler}>
                 <div className='flex flex-row'>
                     <div className='TravelStoreHold flex flex-row gap-16'>
                         {store.map((item) => {
@@ -199,8 +163,7 @@ const Body = () => {
 
 
 
-
-            {show4 && <div className='newContent relative left-72 text-base text-gray-500 top-16' onMouseLeave={dontShowHandler}>
+            {show4 && <div className='newContent relative left-72 text-base text-gray-500 top-16 transition4' onMouseLeave={dontShowHandler}>
                 <div className='newCategoryHold flex flex-col gap-9'>
                     <p className='font-bold text-xl'>  CATEGORY </p>
 

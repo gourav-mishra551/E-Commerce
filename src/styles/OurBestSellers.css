@@ -1,5 +1,6 @@
 .ourBestSellersImg {
     width: 19rem !important;
+    height: 19rem !important;
     object-fit: contain !important;
 }
 
@@ -12,7 +13,11 @@
     width: 104vw;
     margin-top: 3rem;
     right: -6.5rem;
+}
 
+.ourBestSellersMainParent .card {
+    flex: 0 0 auto;
+    width: 24rem;
 }
 
 :root{

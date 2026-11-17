@@ -27,34 +27,19 @@ const OurBestSellers = (props) => {
 
 
     return (
-        <div>
-            <div key={id}>
-
-                <div className="card w-96 bg-base-100 shadow-xl zoom">
-
-                    <Link to={`/${id}`}>
-                        <figure className="px-10 pt-10">
-                            <img src={image} alt="Shoes" className="rounded-xl" />
-                        </figure>
-
-                    </Link>
-                    <div className="card-body items-center text-center">
-                        <h2 className="card-title mb-1 font-bold text-xl">{title}</h2>
-                        <h2 className=" text-xl mb-2 fof">${price}</h2>
-
-
-                        <div className="card-actions">
-                            <button className="btn btn-primary" onClick={addItemToCartHandler}>Buy Now</button>
-                        </div>
-
-                    </div>
-
+        <div className="card w-96 bg-base-100 shadow-xl zoom">
+            <Link to={`/${id}`}>
+                <figure className="px-10 pt-10">
+                    <img src={image} alt={title} className="rounded-xl ourBestSellersImg" />
+                </figure>
+            </Link>
+            <div className="card-body items-center text-center">
+                <h2 className="card-title mb-1 font-bold text-xl">{title}</h2>
+                <h2 className=" text-xl mb-2 fof">${price}</h2>
+                <div className="card-actions">
+                    <button className="btn btn-primary" onClick={addItemToCartHandler}>Buy Now</button>
                 </div>
-
             </div>
-            
-
-
         </div>
     )
 }

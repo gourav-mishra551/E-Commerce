@@ -1,10 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 import "../styles/SearchBox.css"
-import { AiOutlineSearch } from "react-icons/ai";
-import { Avatar, AvatarBadge, AvatarGroup } from '@chakra-ui/react'
 import { AiFillStar } from "react-icons/ai"
-import ShowMoreText from "react-show-more-text";
 
 
 const SearchBox = () => {
@@ -56,13 +53,6 @@ const SearchBox = () => {
   const boostClickHnadler = () => {
     setSearch(boostClick);
   }
-
-
-  const executeOnClick = (isExpanded) => {
-    console.log(isExpanded);
-  }
-
-
 
   const names = [
     // 1 - 5 smell
